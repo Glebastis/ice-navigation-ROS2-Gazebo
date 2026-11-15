@@ -18,6 +18,9 @@ ament_target_dependencies(simple_controller rclcpp geometry_msgs sensor_msgs nav
 add_executable(noisy_controller src/noisy_controller.cpp)
 ament_target_dependencies(noisy_controller rclcpp geometry_msgs sensor_msgs nav_msgs tf2_ros tf2)
 
+add_executable(perturbation_node src/perturbation_node.cpp)
+ament_target_dependencies(perturbation_node rclcpp geometry_msgs)
+
 install(
   DIRECTORY include
   DESTINATION include
@@ -26,6 +29,7 @@ install(
 install(TARGETS
   simple_controller
   noisy_controller
+  perturbation_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

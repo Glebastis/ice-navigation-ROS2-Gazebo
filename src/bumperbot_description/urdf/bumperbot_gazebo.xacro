@@ -45,10 +45,10 @@
   <!-- ROS 2 Control -->
   <gazebo>
     <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
-      <!-- <ros>
+      <ros>
         <remapping>cmd_vel:=cmd_vel_raw</remapping>
         <remapping>odom:=odom</remapping>
-      </ros> -->
+      </ros>
       <update_rate>50</update_rate>
       <left_joint>wheel_left_joint</left_joint>
       <right_joint>wheel_right_joint</right_joint>
